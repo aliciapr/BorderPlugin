@@ -1,0 +1,31 @@
+<html>
+<head>
+<script type="text/javascript" src="lib/jquery-1.8.2.js"></script>
+<script type="text/javascript" src="src/plugin.js"></script>
+<title>CSS jQuery plugin</title>
+</head>
+<body>
+
+	<div id="foo1">1st div</div>
+	<div id="foo2">2nd div</div>
+	<div id="foo3">3rd div</div>
+
+	<script>
+		//jQuery module that provides the following methods for setting CSS border properties:
+		$(document).ready(function() {
+			$('#foo1').border('1px solid blue');
+
+			$('#foo2').border(null);
+
+			$('#foo3').border({
+				width : '2px',
+				color : 'red',
+				radius : '1px'
+			});
+
+			var value = $('#foo1').border(); // Returns the value of the border property
+			//alert(value);
+		});
+	</script>
+</body>
+</html>
